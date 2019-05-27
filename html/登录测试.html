@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8">
+<title>测试登录页</title>
+<link rel="stylesheet" type="text/css" href="../css/111.css">
+<style type="text/css">
+	html{
+		height: 100%;
+	}
+	body{
+		height: 100%;
+		margin: 0;
+	}
+	h2{
+		margin: 0;
+	}
+	input{
+		outline: none;
+		
+		
+	}
+    #laorenAddForm{
+
+        width: 100%;
+        height:500px;
+
+    }
+    table{
+        width: 100%;
+        height:90%;
+
+    }
+	
+</style>
+</head>
+<body>
+	<div id="mask">
+		
+	</div>
+	<div class="drog">
+		<h2 class="title">
+			<span class="line"></span>
+			<span class="title_line">用户注册</span>
+		<span class="line"></span>
+	</h2>
+        <form id="laorenAddForm" modelAttribute="userEntity" method="post">
+            <table>
+                <tbody>
+                <tr>
+                    <td class="td_left">账号：</td>
+                    <td >
+                        <div class="d1">
+                            <input class="input1" type="text" placeholder="请输入4-12个字符">
+                        </div>
+
+                    </td>
+                    <td class="td_right"></td>
+                </tr>
+
+                <tr>
+                    <td class="td_left">密码：</td>
+                    <td>
+                        <div class="d1">
+                            <input class="input1" type="password" placeholder="请输入密码">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_left">确认密码：</td>
+                    <td>
+                        <div class="d1">
+                            <input class="input1" type="password" placeholder="请再次输入密码">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_left">姓名：</td>
+                    <td>
+                        <div class="d1">
+                            <input  class="input1" type="text"  placeholder="请输入4-12个字符">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_left">年龄：</td>
+                    <td>
+                        <div class="d1">
+                            <input  class="input1" type="text" placeholder="请输入1-3位数字">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_left">性别：</td>
+                    <td>
+                        <div class="d2">
+                            <input class="input2" id="man" type="radio" name="gender" checked>
+                            <label for="man"> 男&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+                            <input class="input2" id="woman" type="radio" name="gender" >
+                            <label for="woman"> 女</label>					</div>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_left">地址：</td>
+                    <td>
+                        <textarea rows="5" cols="30"></textarea>
+                    </td>
+                </tr>
+                <!--<tr>-->
+                    <!--<td class="td_left"></td>-->
+                    <!--<td >-->
+                        <!--<input type="submit" class="btn1" value="提交" onclick="javascript:window.location.href='老人登陆.html'">-->
+                        <!--<input type="reset" class="btn2">-->
+                    <!--</td>-->
+                <!--</tr>-->
+                </tbody>
+            </table>
+            <input type="submit" class="btn1" value="提交" style="margin-left: 30%" onclick="window.open('老人登陆.html')" >
+            <input type="reset" class="btn2">
+        </form>
+
+	</div>
+
+</body>

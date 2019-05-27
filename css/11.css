@@ -1,0 +1,111 @@
+#mask{
+		height: 100%;
+		background: url(../img/8.jpeg);
+		background-size: cover;
+		/*cover覆盖*/
+		filter: blur(3px);
+		/*滤镜：模糊*/
+	}
+	.drog{
+		width: 480px;
+		height: 600px;
+		opacity:0.8;
+		background: rgba(255,255,255,8);
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-left:-240px;
+		margin-top: -300px;
+		border: 1px solid #fff;
+		background-clip: content-box;
+		padding: 10px;
+		border-radius: 10px;
+	}
+	.title{
+		text-align: center;
+		font-size: 28px;
+		margin: 24px 0;
+		display: flex;
+	}
+	.title .title_line{
+		padding: 0 20px;
+	}
+	.title .line{
+		background:linear-gradient(
+			transparent 49%,
+			#000 49%,
+			#000 51%,
+			transparent 51%
+			);/*渐变*/
+		flex: 1;/*决定宽度 根据当前富裕宽度（剩余可利用空间）*/
+	}
+	table{
+		width: 100%;
+		height:75%;
+		
+	}
+	.td_left{
+
+		width: 150px;
+		text-align: right;
+		
+	}
+	.td_right{
+
+		width: 120px;
+		text-align: left;
+		
+	}
+	.d1{
+		border-bottom: 1px solid #000;
+	}
+	.d1:hover{
+		border-bottom: 1px solid gray;
+	}
+
+	.input1{
+		margin-left: 13px;
+		width: 180px;
+		height: 30px;
+		border: 0;
+	}
+
+	.input1::-webkit-input-placeholder{
+		transition: .5s;
+		transform-origin: left top;
+	}
+	.input1:focus::-webkit-input-placeholder{
+		transform: scale(0.9) translateY(-10px);
+
+	}
+	.input2{
+		display: none;
+
+	}
+	label::before{
+		content:'';
+		display: inline-block;
+		width: 7px;
+		height: 7px;
+		/*background: black;*/
+		border:1px solid black;
+		border-radius: 50%;
+		padding: 3px;
+		/*background-clip: content-box;*/
+	}
+	.input2:checked+label::before{
+		background: black;
+		background-clip: content-box;
+	}
+	
+	.btn1{
+		margin-top: 10px;
+		width: 100px;
+		height: 30px;
+	}
+	.btn2{
+		margin-top: 10px;
+		margin-left: 5px;
+		width: 100px;
+		height: 30px;
+	}

@@ -1,0 +1,241 @@
+	html{
+		height: 100%;
+	}
+	body{
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		font-family: tahoma,arial,'Hiragino Sans GB','微软雅黑',sans-serif;
+    color: #6f7b91;
+    font-size: 14px;
+    position: relative;
+    min-width: 1200px;
+	}
+	input{
+		outline: none;
+	}
+	em, i, dfn {
+    font-style: normal;
+}	
+	ul{
+		margin: 0;
+		padding: 0;
+		display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+	}
+	li {
+    list-style: none;
+}
+	a {
+    text-decoration: none;
+    color: #666;
+    outline: 0;
+}
+	#mask{
+		height: 100%;
+
+		background-size: cover;
+		/*cover覆盖*/
+		filter: blur(3px);
+		/*滤镜：模糊*/
+	}
+	.header{
+		top: 0;
+		position: absolute;
+		width: 100%;
+		height:72px;
+		background:rgba(32,178,170,0.4);
+		
+	}
+	.logo{
+		margin-top: 5px;
+		float: left;
+		width: 370px;
+		text-align: right;
+		line-height:75px;
+	}
+	.nav-center {
+	position: absolute;
+    width: 1300px;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 0;
+    top: 0;
+}
+.nav-center .loginBox {
+    float: right;
+    height: 100%;
+    font-size: 14px;
+}
+	 .loginBox li {
+    float: left;
+    height: 100%;
+    line-height: 50px;
+}
+.nav-center .loginBox .line {
+    margin: 0 20px;
+}
+	.nav-center .nav-list {
+    text-align: center;
+    height: 100%;
+    line-height: 50px;
+}
+.nav-center .nav-list li {
+    height: 100%;
+    line-height: 50px;
+    display: inline-block;
+}
+	.nav-center .nav-list a {
+    padding: 10px 29px;
+    font-size: 16px;
+    line-height: 16px;
+    border-radius: 18px;
+}
+	.nav-center .nav-list a:hover {
+    padding: 10px 29px;
+    font-size: 16px;
+    line-height: 16px;
+    border-radius: 18px;
+    background:#AFEEEE;
+}
+	.main-body{
+		top: 85px;
+		position: absolute;
+		width: 100%;
+		height: 600px;
+	}
+	.main-body .main{
+
+		width: 300px;
+    	margin: 0 auto;
+   		padding: 106px 0 70px;
+	}
+	.logo1{
+		height: 93px;
+    text-align: center;
+	}
+	.logo1 img{
+		display: inline-block;
+    	vertical-align: middle;
+	}
+	.title{
+		height: 31px;
+    text-align: center;
+    line-height: 31px;
+    color: green;
+    font-size: 20px;
+    padding-bottom: 6px;
+	}
+	.inpline{
+		height: 40px;
+    margin-top: 30px;
+	}
+	.inpline .inpL {
+    width: 278px;
+    height: 18px;
+    border: 1px solid green;
+    border-radius: 19px;
+    padding: 10px;
+    display: inline-block;
+    cursor: text;
+    position: relative;
+}
+	.inpline .inpL input {
+    width: 278px;
+    height: 18px;
+    background: transparent;
+    text-align: center;
+    float: left;
+    border:0;
+}
+	.inpline .inpL input::-webkit-input-placeholder{
+		transition: .3s;
+		
+	}
+	.inpline .inpL input:focus::-webkit-input-placeholder{
+		transform: scale(0.9) ;
+		color:rgba(0,0,0,0.5)
+	}
+
+	.inpline .inpL span {
+    width: 278px;
+    height: 18px;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+	.inpline .inpL.active span{
+	opacity:0.6; 
+    color: #444d59;
+    
+	}
+	.inpline .inpL.active input{
+	opacity:0.6; 
+    color: #444d59;
+    display: block;
+	}
+	.inpline .btn {
+    width: 298px;
+    height: 38px;
+    border: 1px solid #00bc9b;
+    border-radius: 19px;
+    background: #00bc9b;
+    color: #fff;
+}
+	.textline {
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+}
+	.content .main .textline em {
+    float: left;
+}
+	.textline span {
+    float: right;
+}
+	.textline em a {
+    color: #fff;
+}.textline span a {
+    color: #00bc9b;
+}
+	.main-footer {
+            bottom: 0px;
+            left: 0px;
+            width: 100%;
+            height: 65px;
+            z-index: 99;
+        }
+	 .nav-links {
+            width: 100%;
+            height: 35px;
+            margin: 0 auto;
+            text-align: center;
+            overflow: hidden;
+        }
+         .main-footer ul {
+            padding-left: 5px;
+        }
+
+        .main-footer li {
+            display: inline-block;
+            margin: 2px;
+        }
+
+        .main-footer li a {
+            color: #666;
+        }
+         .ownership {
+            text-align: center;
+            height: 25px;
+            line-height: 40px;
+        }

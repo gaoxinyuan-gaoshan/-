@@ -1,0 +1,593 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+<title>老人首页</title>
+<script type="text/javascript" src="../js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript">
+	
+</script>
+<style type="text/css">
+	html{
+		height: 100%;
+	}
+	body{
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		font-family: tahoma,arial,'Hiragino Sans GB','微软雅黑',sans-serif;
+    color: #6f7b91;
+    font-size: 14px;
+    position: relative;
+    /*min-width: 1200px;*/
+	}
+	input{
+		outline: none;
+	}
+	em, i, dfn {
+    font-style: normal;
+}	
+	ul{
+		margin: 0;
+		padding: 0;
+		display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+	}
+	li {
+    list-style: none;
+}
+	a {
+    text-decoration: none;
+    color: #666;
+    outline: 0;
+}
+
+	.header{
+		top: 0;
+		width: 100%;
+		height:72px;
+		/*background:rgba(32,178,170,0.4);*/
+		background: white;
+		 z-index: 888;
+	}
+	.logo{
+		margin-top: 5px;
+		float: left;
+		width: 370px;
+		text-align: right;
+		line-height:75px;
+	}
+	.nav-center {
+	position: absolute;
+    width: 1350px;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 0;
+    top: 0;
+}
+.nav-center .loginBox {
+    float: right;
+    height: 100%;
+    font-size: 14px;
+}
+	 .loginBox li {
+    float: left;
+    height: 100%;
+    line-height: 50px;
+}
+.nav-center .loginBox .line {
+    margin: 0 20px;
+}
+	.nav-center .nav-list {
+    text-align: center;
+    height: 100%;
+    line-height: 50px;
+}
+.nav-center .nav-list li {
+    height: 100%;
+    line-height: 50px;
+    display: inline-block;
+}
+	.nav-center .nav-list a {
+    padding: 10px 29px;
+    font-size: 16px;
+    line-height: 16px;
+    border-radius: 18px;
+}
+	.nav-center .nav-list a:hover {
+    padding: 10px 29px;
+    font-size: 16px;
+    line-height: 16px;
+    border-radius: 18px;
+    background:#AFEEEE;
+}
+
+	.main-footer {
+            bottom: 0px;
+            left: 0px;
+            width: 100%;
+            height: 65px;
+            z-index: 99;
+        }
+	 .nav-links {
+            width: 100%;
+            height: 35px;
+            margin: 0 auto;
+            text-align: center;
+            overflow: hidden;
+        }
+         .main-footer ul {
+            padding-left: 5px;
+        }
+
+        .main-footer li {
+            display: inline-block;
+            margin: 2px;
+        }
+
+        .main-footer li a {
+            color: #666;
+        }
+         .ownership {
+            text-align: center;
+            height: 25px;
+            line-height: 40px;
+        }
+ 	.second {
+            text-align: center;
+            display: none;
+            position: absolute;
+            margin-top: 25px;
+            margin-left: -30px;
+            font-size: 14px;
+        }
+        .first:hover .second{
+            display: block;
+            background-color: transparent;
+            z-index: 999;/*一直显示在最上方*/
+        }
+        .first:hover .second a:hover{
+        	 font-size: 12px;
+        	  padding: 0px;
+    	line-height: 0px;
+    	border-radius: 18px;
+        }
+       .second td:hover{
+       	border-radius: 18px;
+        	background:#AFEEEE;
+        }
+        .first .second a{
+        	font-size: 12px;
+        	  padding: 0px;
+    	line-height: 0px;
+    	border-radius: 0px;
+        }
+        .banner{
+        	position: relative;
+            width: 100%;
+            height: 530px;
+            z-index: 666;
+        }
+        .banner .pic img{
+        	top: -72px;
+            position: absolute;
+            display: none;
+        }
+        .banner .pic img:nth-child(1) {
+            display: block;
+        }
+        .nums{
+            left: 43%;
+            top: 90%;
+            position: absolute;
+        }
+        .nums li{
+            width: 30px;
+            height: 8px;
+            background-color: darkgrey;
+            display: inline-block;
+            margin-left:5px ;
+            border-radius: 10px;
+        }
+        .nums li:nth-child(1){
+            background-color: white;
+        }
+        .word{
+        	margin:0 auto;
+            width: 1200px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+        .word a{
+            color: #000;
+        }
+        .main{
+        	background: #20B2AA;
+            width: 100%;
+            height: 200px;
+        }
+        .brand{
+        	margin: 0 auto;
+            width: 1200px;
+            height: 200px;
+        }
+        .brand_left{
+            width: 400px;
+            height:200px;
+            float: left;
+            overflow: hidden;
+        }
+        .brand_left img{
+            transition: all 0.5s;
+        }
+        .brand_left img:hover{
+            transform: scale(1.05);
+        }
+        .brand_middle{
+        	background: white;
+            width: 400px;
+            height:200px;
+            float: left;
+        }
+        .brand_right{
+            width: 400px;
+            height:200px;
+            float: left;
+            overflow: hidden;
+        }
+        .brand_right img{
+            transition: all 0.5s;
+        }
+        .brand_right img:hover{
+            transform: scale(1.05);
+        }
+        /*main*****************************************/
+        .product{
+        	background: #20B2AA;
+        }
+        .product1{
+        	margin:0 auto;
+            width: 1200px;
+            height: 500px;
+        }
+        .product1_left{
+            width: 600px;
+            height: 500px;
+            float: left;
+        }
+        .product1_right{
+        	background:white;
+            width: 560px;
+            height: 300px;
+            float: left;
+            padding-top:200px;
+            padding-left: 40px;
+        }
+        .product1_right span:nth-child(1){
+            font-weight: bolder;
+            font-size: 50px;
+        }
+        .product1_right .btn{
+            border: solid;
+            border-radius: 40px;
+            width: 160px;
+            height: 50px;
+            background-color: white;
+        }
+        .product1_right .btn:hover{
+            background-color:black;
+            color: white;
+        }
+        .product2{
+        	margin:0 auto;
+            width: 1200px;
+            height: 500px;
+        }
+        .product2_left{
+        	background: white;
+             width: 560px;
+             height: 340px;
+             float: left;
+             text-align: left;
+            padding-left: 40px;
+            padding-top: 160px;
+         }
+        .product2_right{
+            width: 600px;
+            height: 500px;
+            float: right;
+        }
+        .product2_left span:nth-child(1){
+            font-weight: bolder;
+            font-size: 40px;
+        }
+        .product2_left span:nth-child(3){
+            font-weight: bolder;
+            font-size: 40px;
+        }
+        .product2_left .btn{
+            border: solid;
+            border-radius: 40px;
+            width: 160px;
+            height: 50px;
+            background-color: white;
+        }
+        .product2_left .btn:hover{
+            background-color:black;
+            color: white;
+        }
+        .product3{
+        	margin: 0 auto;
+        	background: white;
+            width: 1200px;
+            height: 500px;
+        }
+        .product3_left{
+            width: 600px;
+            height: 500px;
+            float: left;
+        }
+        .product3_right{
+            width: 560px;
+            height: 300px;
+            float: left;
+            padding-top:200px;
+            padding-left: 40px;
+        }
+        .product3_right span:nth-child(1){
+            font-weight: bolder;
+            font-size: 40px;
+        }
+        .product3_right span:nth-child(3){
+             font-weight: bolder;
+             font-size: 40px;
+         }
+
+        .product3_right .btn{
+            border: solid;
+            border-radius: 40px;
+            width: 160px;
+            height: 50px;
+            background-color: white;
+        }
+        .product3_right .btn:hover{
+            background-color:black;
+            color: white;
+        }
+        .product4{
+        	margin: 0 auto;
+            width: 1200px;
+            height: 500px;
+        }
+        .product4_left{
+        	background: white;
+             width: 560px;
+             height: 300px;
+             float: left;
+             padding-top:200px;
+             padding-left: 40px;
+         }
+        .product4_right{
+            width: 600px;
+            height: 500px;
+            float: left;
+        }
+        .product4_left span:nth-child(1){
+            font-weight: bolder;
+            font-size: 50px;
+        }
+        .product4_left .btn{
+            border: solid;
+            border-radius: 40px;
+            width: 160px;
+            height: 50px;
+            background-color: white;
+        }
+        .product4_left .btn:hover{
+            background-color:black;
+            color: white;
+        }
+        .head{
+        	background: #f7f7f7;
+        	width: 85%;
+        	height: 170px;
+            background-color: whitesmoke;
+            padding-left: 15%;
+            border-top: solid;
+            border-bottom: solid;
+            border-color: white;
+        }
+        .head li{
+            font-size: 14px;
+            text-align:left ;
+        }
+</style>
+ <script>
+        $(function() {
+            var order = 1;//order 代表图片轮播的顺序
+            //定时器
+            window.setInterval(lunbo,2000);
+            function lunbo(){
+                if(order==3) order=0;
+                $(".pic img").eq(order).fadeIn().siblings().fadeOut()
+                $(".nums li").eq(order).css("background-color","white").siblings().css("background-color","darkgrey")
+                order++;
+            }
+        })
+    </script>
+</head>
+<body>
+
+	
+	<div class="banner">
+		
+    <div class="pic">
+
+        <img src="../img/banner1.jpg" alt="" width=100% height="600px"/>
+        <img src="../img/banner2.jpg" alt="" width=100% height="600px"/>
+        <img src="../img/banner3.jpg" alt="" width=100% height="600px"/>
+    </div>
+<!--********控制条r******************************-->
+    <div class="nums">
+         <ul>
+             <li></li>
+             <li></li>
+             <li></li>
+        </ul>
+    </div>
+    <div class="header">
+		
+		<div class="nav-center">
+			<div class="logo">
+			<img src="../img/13.png">
+		</div>
+				<ul class="loginBox">
+			<li><a href="首页.html">登录</a></li>
+			<li class="line">|</li>
+			<li><a href="登录测试.html">注册</a></li>
+		</ul>
+						<ul class="nav-list">
+			<li class="first"><a href="">首页</a>
+				<div class="second">
+                        <table cellpadding="10" width="150">
+                            <tr>
+                                <td><a href="">使用手册</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="">平台优势</a></td>
+
+                            </tr>
+                            <tr>
+                                <td><a href="">嗯嗯嗯</a></td>
+
+                            </tr>
+      
+                        </table>
+                    </div>
+			</li>
+			<!--<li><a href="https://www.miaov.com/index.php/Course/courseList">课程</a></li>-->
+			<li><a href="">老人服务</a></li>
+			<li><a href="">亲人服务</a></li>
+			<li><a href="">医生服务<i class="nav-new"></i></a></li>
+			<li><a href="">视频资料</a></li>
+			<li><a href="">养老政策</a></li>
+		</ul>
+	</div>
+	</div>
+<!--********控制条r******************************-->
+</div>
+	<div class="word"><a href="">开启医养新时代</a></div>
+	<div class="main">
+    <div class="brand">
+        <div class="brand_left">
+                <img src="../img/left.jpg" alt="" width="400" height="200"/>
+        </div>
+        <div class="brand_middle">
+            <video src="../video/middle.mp4" height="200" width="400"  loop controls autoplay poster="../img/middle.jpg"></video>
+        </div>
+        <div class="brand_right">
+            <img src="../img/right.jpg" alt="" width="400" height="200"/>
+        </div>
+    </div>
+</div>
+<div class="product">
+	<div class="product1">
+     <div class="product1_left">
+    <img src="../img/11.jpg" alt="" width="600" height="500"/>
+</div>
+     <div class="product1_right">
+    <span>关爱老人 线上医养平台</span><br/><br/>
+    <span>给您温暖关怀</span><br/><br/>
+    <a href=""><input type="button" class="btn" value="了解更多信息"/></a>
+</div>
+</div>
+</div>
+<div class="product">
+		<div class="product2">
+    <div class="product2_left">
+         <span>子女线上观察</span><br/>
+         <span>老人身体信息实时传输</span><br/><br/>
+         <span>让爱零距离</span><br/><br/>
+         <a href=""><input type="button" class="btn" value="了解更多信息"/></a>
+     </div>
+<div class="product2_right">
+    <img src="../img/22.jpg" alt="" width="600" height="500"/>
+</div>
+</div>
+</div>
+
+<div class="product">
+	<div class="product3">
+    <div class="product3_left">
+    <img src="../img/33.jpg" alt="" width="600" height="500"/>
+</div>
+    <div class="product3_right">
+          <span>优秀医生团队 多家合作医院</span><br/>
+          <span>实时线上答疑</span><br/>
+          <span>给您最专业的家庭医生</span><br/><br/>
+          <a href=""><input type="button" class="btn" value="了解更多信息"/></a>
+     </div>
+</div>
+</div>
+<div class="product">
+	<div class="product4">
+    <div class="product4_left">
+        <span>众多视频资料</span><br/>
+        <span>给予您全方位的健康指导</span><br/><br/>
+        <a href=""><input type="button" class="btn" value="了解视频资料"/></a>
+    </div>
+    <div class="product4_right">
+        <img src="../img/44.jpg" alt="" width="600" height="500"/>
+    </div>
+</div>
+</div>
+	<div class="head">
+		<h2>使用手册</h2>
+		<ul>
+			<li>*请您选择好自己的身份分类进行登录注册</li>
+			<li>*老人使用时，请填写正确的身份证号及住址</li>
+			<li>*子女亲人使用时，请用老人的唯一账号id进行绑定</li>
+			<li>*医生使用时，请填写正确的科室及主诊病症、所在医院</li>
+			<li>*咨询医生可以拨打电话咨询</li>
+		</ul>
+	</div>
+
+	<div class="main-footer">
+		<div class="nav-links">
+            <ul>
+                <li><a href="http://www.567jia.com/" target="_blank" seed="">老年之家</a></li>
+                <li>|</li>
+                <li><a href="https://www.alipay.com" target="_blank" seed="">中国养老网</a></li>
+                <li>|</li>
+                <li><a href="http://www.jly.net.cn/" target="_blank" seed="">敬老院</a></li>
+                <li>|</li>
+                <li><a href="https://www.baidu.com" target="_blank" seed="">关于我们</a></li>
+                <li>|</li>
+                <li><a href="https://www.baidu.com" target="_blank" seed="">用户条款</a></li>
+                <li>|</li>
+                <li><a href="https://www.baidu.com" target="_blank" seed="">隐私声明</a></li>
+                <li>|</li>
+                <li><a href="https://www.baidu.com" target="_blank" seed="">诚征英才</a></li>
+                <li>|</li>
+                <li><a href="https://www.baidu.com" target="_blank" seed="">联系我们</a></li>
+                <li>|</li>
+                <li><a href="https://www.baidu.com" target="_blank" seed="">意见反馈</a></li>
+
+            </ul>
+            
+
+	</div>
+	<div class="ownership">
+            <span style="color:black ">中北大学年薪百万工程师小组制</span>
+        </div>
+	</div>
+</body>
+</html>

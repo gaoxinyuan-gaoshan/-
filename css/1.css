@@ -1,0 +1,15 @@
+.input1{
+		height: 30px;
+		border: 0;
+		border-bottom: 1px solid #000;
+	}
+	.input1:focus{
+		border-bottom-color: gray;
+	}
+	.input1::-webkit-input-placeholder{
+		transition: .5s;
+		transform-origin: left top;
+	}
+	.input1:focus::-webkit-input-placeholder{
+		transform: scale(0.9) translateY(-10px);
+	}

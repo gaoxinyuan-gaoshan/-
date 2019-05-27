@@ -1,0 +1,358 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+<title>老人登录</title>
+<script type="text/javascript" src="../js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	$("#login-submit").submit(function(){
+		window.location.href="测试老人首页.html";
+	});
+	$("#login-account").focus(function(){
+    $("#inpL1").css("background-color","white");
+});
+    $("#login-account").blur(function(){
+    $("#inpL1").css("background-color","transparent");
+  });
+    $("#login-pwd").focus(function(){
+    $("#inpL2").css("background-color","white");
+  });
+    $("#login-pwd").blur(function(){
+    $("#inpL2").css("background-color","transparent");
+  });
+});
+</script>
+<style type="text/css">
+	html{
+		height: 100%;
+	}
+	body{
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		font-family: tahoma,arial,'Hiragino Sans GB','微软雅黑',sans-serif;
+    color: #6f7b91;
+    font-size: 14px;
+    position: relative;
+    min-width: 1200px;
+	}
+	input{
+		outline: none;
+	}
+	em, i, dfn {
+    font-style: normal;
+}	
+	ul{
+		margin: 0;
+		padding: 0;
+		display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+	}
+	li {
+    list-style: none;
+}
+	a {
+    text-decoration: none;
+    color: #666;
+    outline: 0;
+}
+	#mask{
+		height: 100%;
+		background: url(../img/8.jpeg);
+		background-size: cover;
+		/*cover覆盖*/
+		filter: blur(3px);
+		/*滤镜：模糊*/
+	}
+	.header{
+		top: 0;
+		position: absolute;
+		width: 100%;
+		height:85px;
+		background:rgba(32,178,170,0.4);
+		
+	}
+	.logo{
+		margin-top: 5px;
+		float: left;
+		width: 400px;
+		text-align: right;
+		line-height:85px;
+	}
+	.nav-center {
+	position: absolute;
+    width: 1300px;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 0;
+    top: 0;
+}
+.nav-center .loginBox {
+    float: right;
+    height: 100%;
+    font-size: 14px;
+}
+	 .loginBox li {
+    float: left;
+    height: 100%;
+    line-height: 70px;
+}
+.nav-center .loginBox .line {
+    margin: 0 20px;
+}
+	.nav-center .nav-list {
+    text-align: center;
+    height: 100%;
+    line-height: 70px;
+}
+.nav-center .nav-list li {
+    height: 100%;
+    line-height: 70px;
+    display: inline-block;
+}
+	.nav-center .nav-list a {
+    padding: 10px 29px;
+    font-size: 16px;
+    line-height: 16px;
+    border-radius: 18px;
+}
+	.nav-center .nav-list a:hover {
+    padding: 10px 29px;
+    font-size: 16px;
+    line-height: 16px;
+    border-radius: 18px;
+    background:#AFEEEE;
+}
+	.main-body{
+		top: 85px;
+		position: absolute;
+		width: 100%;
+		height: 600px;
+	}
+	.main-body .main{
+
+		width: 300px;
+    	margin: 0 auto;
+   		padding: 106px 0 70px;
+	}
+	.logo1{
+		height: 93px;
+    text-align: center;
+	}
+	.logo1 img{
+		display: inline-block;
+    	vertical-align: middle;
+	}
+	.title{
+		height: 31px;
+    text-align: center;
+    line-height: 31px;
+    color: green;
+    font-size: 20px;
+    padding-bottom: 6px;
+	}
+	.inpline{
+		height: 40px;
+    margin-top: 30px;
+	}
+	.inpline .inpL {
+    width: 278px;
+    height: 18px;
+    border: 1px solid green;
+    border-radius: 19px;
+    padding: 10px;
+    display: inline-block;
+    cursor: text;
+    position: relative;
+}
+	.inpline .inpL input {
+    width: 278px;
+    height: 18px;
+    background: transparent;
+    text-align: center;
+    float: left;
+    border:0;
+}
+	.inpline .inpL input::-webkit-input-placeholder{
+		transition: .3s;
+		
+	}
+	.inpline .inpL input:focus::-webkit-input-placeholder{
+		transform: scale(0.9) ;
+		color:rgba(0,0,0,0.5)
+	}
+
+	.inpline .inpL span {
+    width: 278px;
+    height: 18px;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+	.inpline .inpL.active span{
+	opacity:0.6; 
+    color: #444d59;
+    
+	}
+	.inpline .inpL.active input{
+	opacity:0.6; 
+    color: #444d59;
+    display: block;
+	}
+	.inpline .btn {
+    width: 298px;
+    height: 38px;
+    border: 1px solid #00bc9b;
+    border-radius: 19px;
+    background: #00bc9b;
+    color: #fff;
+}
+	.textline {
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+}
+	.content .main .textline em {
+    float: left;
+}
+	.textline span {
+    float: right;
+}
+	.textline em a {
+    color: #fff;
+}.textline span a {
+    color: #00bc9b;
+}
+	.main-footer {
+            bottom: 0px;
+            left: 0px;
+            width: 100%;
+            height: 65px;
+            z-index: 99;
+        }
+	 .nav-links {
+            width: 100%;
+            height: 35px;
+            margin: 0 auto;
+            text-align: center;
+            overflow: hidden;
+        }
+         .main-footer ul {
+            padding-left: 5px;
+        }
+
+        .main-footer li {
+            display: inline-block;
+            margin: 2px;
+        }
+
+        .main-footer li a {
+            color: #666;
+        }
+         .ownership {
+            text-align: center;
+            height: 25px;
+            line-height: 40px;
+        }
+</style>
+</head>
+<body>
+	<div id="mask">
+		
+	</div>
+	<div class="header">
+		
+		<div class="nav-center">
+			<div class="logo">
+			<img src="../img/10.png">
+		</div>
+				<ul class="loginBox">
+			<li><a href="">登录</a></li>
+			<li class="line">|</li>
+			<li><a href="登录测试.html">注册</a></li>
+		</ul>
+						<ul class="nav-list">
+			<li><a href="测试老人首页.html">首页</a></li>
+			<!--<li><a href="https://www.miaov.com/index.php/Course/courseList">课程</a></li>-->
+                            <li><a href="">老人服务</a></li>
+                            <li><a href="">亲人服务</a></li>
+                            <li><a href="">医生服务<i class="nav-new"></i></a></li>
+                            <li><a href="">视频资料</a></li>
+                            <li><a href="">养老政策</a></li>
+		</ul>
+	</div>
+	</div>
+	<div class="main-body">
+			<div class="main" style="padding-top: 120px;">
+				<div class="logo1">
+					<img src="../img/23.png">
+				</div>
+				<div class="title">欢迎您的登录</div>
+                <form id="dengluZhanghao" method="post">
+                    <div class="inpline">
+                        <label class="inpL" id="inpL1">
+                            <input  type="text" id="login-account" name="username" placeholder="请输入您的账号">
+                        </label>
+
+                    </div>
+                    <input type="hidden" >
+                </form>
+                <form id="dengluMima" method="post">
+                    <div class="inpline">
+                        <label class="inpL" id="inpL2">
+                            <input  type="password" id="login-pwd" name="password" onfocus="this.type='password'" placeholder="请输入您的密码">
+                        </label>
+                    </div>
+                </form>
+
+				<div class="inpline">
+			<button type="button" id="login-submit" class="btn btn-default" onclick="javascript:window.location.href='测试老人首页.html'">登 录</button>
+			</div>
+			<div class="textline">
+			<em><a href="">忘记密码?</a></em>
+			<span>还没有账号？<a href="登录测试.html">立即注册</a></span>
+		</div>
+			</div>
+		</div>
+	<div class="main-footer">
+		<div class="nav-links">
+            <ul>
+                <li><a href="http://www.567jia.com/" target="_blank" seed="">老年之家</a></li>
+                <li>|</li>
+                <li><a href="https://www.alipay.com" target="_blank" seed="">中国养老网</a></li>
+                <li>|</li>
+                <li><a href="http://www.jly.net.cn/" target="_blank" seed="">敬老院</a></li>
+                <li>|</li>
+                <li><a href="https://www.baidu.com" target="_blank" seed="">关于我们</a></li>
+                <li>|</li>
+                <li><a href="https://www.baidu.com" target="_blank" seed="">用户条款</a></li>
+                <li>|</li>
+                <li><a href="https://www.baidu.com" target="_blank" seed="">隐私声明</a></li>
+                <li>|</li>
+                <li><a href="https://www.baidu.com" target="_blank" seed="">诚征英才</a></li>
+                <li>|</li>
+                <li><a href="https://www.baidu.com" target="_blank" seed="">联系我们</a></li>
+                <li>|</li>
+                <li><a href="https://www.baidu.com" target="_blank" seed="">意见反馈</a></li>
+
+            </ul>
+            
+
+	</div>
+	<div class="ownership">
+            <span style="color:black ">中北大学年薪百万工程师小组制</span>
+        </div>
+	</div>
+</body>
+</html>
